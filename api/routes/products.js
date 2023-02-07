@@ -161,10 +161,6 @@ router.patch('/:productId', (req, res, next) => {
     console.log(err)
     res.status(500).json({error: err})
   });
-  // res.status(200).json({
-  //   message: 'update product',
-  //   id: id
-  // })
 })
 router.delete('/:productId', (req, res, next) => {
   const id = req.params.productId;
@@ -183,10 +179,6 @@ router.delete('/:productId', (req, res, next) => {
     .catch(err => {
       res.status(500).json({error: err})
     })
-  // res.status(200).json({
-  //   message: 'delete product',
-  //   id: id
-  // })
 })
 
 module.exports = router
